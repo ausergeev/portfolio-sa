@@ -892,7 +892,7 @@
 </ol>
 <p>Логическая модель данных в 3НФ выглядит следующим образом:</p>
 <div style="text-align: center;">
-    <img src="/skills/technical-skills/example-solving-task/industry-logical-diagram.png" alt="Изображение" width="500" />
+    <img src="../industry-logical-diagram.png" alt="Изображение" width="500" />
 </div>
 
 <p>Примечания:</p>
@@ -977,14 +977,14 @@
 Предположил, что в качестве БД сервиса используется PostgreSQL.
 Физическая модель данных для PostgreSQL выглядит следующим образом:</p>
 <div style="text-align: center;">
-    <img src="/skills/technical-skills/example-solving-task/industry-phisical-diagram.png" alt="Изображение" width="500" />
+    <img src="../industry-phisical-diagram.png" alt="Изображение" width="500" />
 </div>
 
 <p>Предположил, что список возможных форм резервуаров впоследствии может быть расширен, в связи с чем решил задать ограничение по длине как для атрибута названия.
 Для подготовки SQL файла, позволяющего создать необходимые таблицы и зависимости в PostgreSQL, воспользовался сервисом <a href="https://dbdiagram.io">https://dbdiagram.io</a>
 Для визуализации физической модели данных c использованием DBML подготовил следующую структуру:</p>
 <div style="text-align: center;">
-    <img src="/skills/technical-skills/example-solving-task/dbdiagram.png" alt="Изображение" width="1000" />
+    <img src="../dbdiagram.png" alt="Изображение" width="1000" />
 </div>
 
 <pre><code>// Use DBML to define your database structure
@@ -1004,7 +1004,7 @@ Ref: reservoirs.product_id &gt; products.product_id // many-to-one
 </code></pre>
 <p>С помощью сервиса <a href="https://dbdiagram.io">https://dbdiagram.io</a> подготовил SQL файл для PostgreSQL, позволяющий создать в БД необходимые таблицы и связи между ними:</p>
 <div style="text-align: center;">
-    <img src="/skills/technical-skills/example-solving-task/postgresql-model.png" alt="Изображение" width="500" />
+    <img src="../postgresql-model.png" alt="Изображение" width="500" />
 </div>
 
 <pre><code>CREATE TABLE &quot;reservoirs&quot; (
@@ -1030,7 +1030,7 @@ ALTER TABLE &quot;reservoirs&quot; ADD FOREIGN KEY (&quot;product_id&quot;) REFE
 </code></pre>
 <p>Результат заполнения:</p>
 <div style="text-align: center;">
-    <img src="/skills/technical-skills/example-solving-task/products.png" alt="Изображение" width="500" />
+    <img src="../products.png" alt="Изображение" width="500" />
 </div>
 
 <p>Далее заполнил таблицу резервуаров:</p>
@@ -1048,7 +1048,7 @@ ALTER TABLE &quot;reservoirs&quot; ADD FOREIGN KEY (&quot;product_id&quot;) REFE
 </code></pre>
 <p>Результат заполнения:</p>
 <div style="text-align: center;">
-    <img src="/skills/technical-skills/example-solving-task/reservoirs.png" alt="Изображение" width="1000" />
+    <img src="../reservoirs.png" alt="Изображение" width="1000" />
 </div>
 
 <p>Таким образом, как минимум один резервуар не привязан к продукту. Как минимум один продукт отсутствует в каком-либо резервуаре. Этих данных посчитал достаточными для отработки запроса.
@@ -1067,7 +1067,7 @@ ORDER BY sum_size DESC;
 </code></pre>
 <p>Результат запроса:</p>
 <div style="text-align: center;">
-    <img src="/skills/technical-skills/example-solving-task/result.png" alt="Изображение" width="1000" />
+    <img src="../result.png" alt="Изображение" width="1000" />
 </div>
 
 <h3 id="rest-api">REST API</h3>
@@ -1109,7 +1109,7 @@ ORDER BY sum_size DESC;
 <p>Результаты проектирования REST API решил офомрмлять в Swagger, посольку это достаточно популярный инструмент, предназначенный именно для описания REST API.
 Для разработки yaml файла и визуализации результата я применил сервис <a href="https://editor.swagger.io/">https://editor.swagger.io/</a></p>
 <div style="text-align: center;">
-    <img src="/skills/technical-skills/example-solving-task/swagger.png" alt="Изображение" width="1000" />
+    <img src="../swagger.png" alt="Изображение" width="1000" />
 </div>
 
 <details>
